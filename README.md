@@ -50,6 +50,10 @@ julia> Π
 
 ```
 
+### Example Notebook
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/antimon2/Sub2Index.jl/master?filepath=example%2FExample.ipynb)
+
 ## Reference
 
 (Inspired by)
