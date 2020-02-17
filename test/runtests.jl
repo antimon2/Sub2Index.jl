@@ -43,3 +43,11 @@ end
             1  9  36  84  126  126  84  36  9  1]
 
 end
+
+@testset "fallbacks" begin
+
+@test @_(123) == 123
+@test @_("Fₙ = Fₙ₋₁ + Fₙ₋₂") == "Fₙ = Fₙ₋₁ + Fₙ₋₂"
+@test @_(:Fₙ) == :Fₙ
+
+end

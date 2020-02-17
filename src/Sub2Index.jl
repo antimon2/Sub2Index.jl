@@ -4,7 +4,7 @@ export @_
 
 const SUB2NDIC = Dict(zip("₍₎₊₋₀₁₂₃₄₅₆₇₈₉₌ₐᵦᵪₑᵧₕᵢⱼₖₗₘₙₒₚᵩᵣᵨₛₔₜᵤᵥₓ", "()+-0123456789=aβχeγhijklmnopφrρsətuvx"))
 
-function sub2ind(src::AbstractString)
+function _sub2ind(src::AbstractString)
     idx = 1
     substrings = Any[]
     for m in eachmatch(r"[ᵢ-ᵪ₀-₎ₐ-ₜⱼ]+", src)
@@ -27,7 +27,7 @@ end
 
 function sub2ind(src::Symbol)
     srcstr = string(src)
-    convertedstr = sub2ind(srcstr)
+    convertedstr = _sub2ind(srcstr)
     esc(Meta.parse(convertedstr))
 end
 
